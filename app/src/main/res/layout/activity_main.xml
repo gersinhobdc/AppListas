@@ -21,21 +21,93 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_marginLeft="70sp"
-        android:textColor="#673A7B"
-        android:textSize="50sp"
-        style="bold"
-        android:text="@string/lista_filmes"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/idRecyclerFilmes"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="500dp"
+        />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:src="@drawable/profile"
+        android:layout_marginTop="70sp"
+        android:layout_marginLeft="20sp"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#FF000000"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="    5\nPosts"
+        android:textColor="@color/black"
+        android:layout_marginTop="100sp"
+        android:layout_marginLeft="140sp"
+        android:textSize="20sp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="    10M\nFollowers"
+        android:textColor="@color/black"
+        android:layout_marginTop="100sp"
+        android:layout_marginLeft="220sp"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="       1\nFollowing"
+        android:textColor="@color/black"
+        android:layout_marginTop="100sp"
+        android:layout_marginLeft="320sp"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2002\n14y\nVirginiano"
+        android:textColor="@color/black"
+        android:layout_marginTop="180sp"
+        android:layout_marginLeft="40sp"
+        android:textSize="17sp"/>
+
+
+    <Button
+        android:id="@+id/follow_button"
+        android:layout_width="170sp"
+        android:layout_height="wrap_content"
+        android:text="Follow"
+        android:layout_marginTop="250sp"
+        android:layout_marginLeft="15sp"
+        android:textColor="@color/white"
+        android:backgroundTint="#0894F4"
+        />
+
+    <Button
+        android:id="@+id/message_button"
+        android:layout_width="170sp"
+        android:layout_height="wrap_content"
+        android:text="Message"
+        android:layout_marginTop="250sp"
+        android:layout_marginLeft="190sp"
+        android:textColor="@color/black"
+        android:backgroundTint="#FFFFFF"
+        />
+    <Button
+        android:id="@+id/morePeople_button"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:text="v"
+        android:layout_marginTop="255sp"
+        android:layout_marginLeft="365sp"
+        android:backgroundTint="#FFFFFF"
+        android:textColor="@color/black"
+
         />
 
 
