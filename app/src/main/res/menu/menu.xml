@@ -5,13 +5,21 @@
         android:icon="@drawable/ic_baseline_home"
         android:title="Home" />
     <item
+        android:id="@+id/mSearch"
+        android:icon="@drawable/baseline_search"
+        android:title="Search" />
+    <item
+        android:id="@+id/mCreate"
+        android:icon="@drawable/baseline_add_box"
+        android:title="Create Pub" />
+    <item
         android:id="@+id/mNotifications"
-        android:icon="@drawable/ic_baseline_notifications"
+        android:icon="@drawable/baseline_favorite"
         android:title="Notifications" />
     <item
-        android:id="@+id/mSettings"
-        android:icon="@drawable/ic_baseline_settings"
-        android:title="Settings" />
+        android:id="@+id/mProfile"
+        android:icon="@drawable/profile"
+        android:title="Profile" />
 
 
 </menu>
