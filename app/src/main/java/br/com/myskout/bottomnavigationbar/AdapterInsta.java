@@ -1,10 +1,14 @@
 package br.com.myskout.bottomnavigationbar;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
@@ -27,15 +31,15 @@ public class AdapterInsta extends RecyclerView.Adapter<AdapterInsta.ViewHolder> 
     @NonNull
     @Override
     public AdapterInsta.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(myContext).inflate(R.layout.modelo_insta, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.modelo_insta, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(AdapterInsta.ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder, int position) {
         Insta filme = lstInsta.get(position);
-        holder.imgInsta.setImageResource(.getImage());
-        holder.cardInsta.setOnClickListener(view -> Toast.makeText(myContext, "Video", Toast.LENGTH_SHORT).show());
+        holder.imgInsta.setImageResource(.getImage);
+        holder.cardInsta.setOnClickListener(view -> Toast.makeText(context, "Video", Toast.LENGTH_SHORT).show());
     }
 
     @Override

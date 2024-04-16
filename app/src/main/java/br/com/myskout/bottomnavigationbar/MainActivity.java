@@ -2,6 +2,7 @@ package br.com.myskout.bottomnavigationbar;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
@@ -71,7 +72,7 @@ lstInsta.add(new Insta(R.drawable.profile));
 
     }
     private void RecyclerView(){
-        recyclerViewInsta = findViewById(R.id.idRecyclerFilmes);
+        recyclerViewInsta = findViewById(R.id.idRecyclerInsta);
         recyclerViewInsta.setLayoutManager(new GridLayoutManager(getApplicationContext(), 3));
         recyclerViewInsta
 

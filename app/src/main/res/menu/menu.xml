@@ -3,23 +3,23 @@
     <item
         android:id="@+id/mHome"
         android:icon="@drawable/ic_baseline_home"
-        android:title="Home" />
+        android:title="@string/home" />
     <item
         android:id="@+id/mSearch"
         android:icon="@drawable/baseline_search"
-        android:title="Search" />
+        android:title="@string/search" />
     <item
         android:id="@+id/mCreate"
         android:icon="@drawable/baseline_add_box"
-        android:title="Create Pub" />
+        android:title="@string/create_pub" />
     <item
         android:id="@+id/mNotifications"
         android:icon="@drawable/baseline_favorite"
-        android:title="Notifications" />
+        android:title="@string/notifications" />
     <item
         android:id="@+id/mProfile"
         android:icon="@drawable/profile"
-        android:title="Profile" />
+        android:title="@string/profile" />
 
 
 </menu>
