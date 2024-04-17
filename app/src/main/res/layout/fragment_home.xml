@@ -13,9 +13,9 @@
 
 
     <LinearLayout
-        android:id="@+id/imgFilmes"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/imgInsta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <ImageView
@@ -26,12 +26,11 @@
             android:scaleType="centerCrop"
             android:src="#000" />
         <TextView
-            android:id="@+id/txtTituloFilmes"
+            android:id="@+id/txtVideo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="24sp"
-            android:text="Aos Olhos do Cego"
             android:textColor="#000"
             android:textSize="20sp"
             android:textStyle="bold"

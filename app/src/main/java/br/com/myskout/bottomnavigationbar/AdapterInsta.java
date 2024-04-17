@@ -1,5 +1,6 @@
 package br.com.myskout.bottomnavigationbar;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +19,7 @@ public class AdapterInsta extends RecyclerView.Adapter<AdapterInsta.ViewHolder> 
     private Context context;
 
     private List<Insta> lstInsta;
+    private int imgInsta;
 
     public AdapterInsta(Context context, List<Insta> lstInsta) {
         this.context = context;
@@ -28,17 +30,20 @@ public class AdapterInsta extends RecyclerView.Adapter<AdapterInsta.ViewHolder> 
         this.context = context;
     }
 
+    public AdapterInsta(String[] myDataset) {
+    }
+
     @NonNull
     @Override
-    public AdapterInsta.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.modelo_insta, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        Insta filme = lstInsta.get(position);
-        holder.imgInsta.setImageResource(.getImage);
+        Insta insta = lstInsta.get(position);
+        holder.imgInsta.setImageResource(this.getImage());
         holder.cardInsta.setOnClickListener(view -> Toast.makeText(context, "Video", Toast.LENGTH_SHORT).show());
     }
 
@@ -47,16 +52,25 @@ public class AdapterInsta extends RecyclerView.Adapter<AdapterInsta.ViewHolder> 
         return lstInsta.size();
     }
 
+    public int getImage() {
+        return imgInsta;
+    }
+
+    public void setImage(int image) {
+        this.imgInsta = image;
+    }
+
     public class ViewHolder extends RecyclerView.ViewHolder{
         ImageView imgInsta;
         CardView cardInsta;
 
 
 
+        @SuppressLint("WrongViewCast")
         public ViewHolder(View itemView) {
             super(itemView);
-            imgInsta = itemView.findViewById(R.id.id_imgInsta);
-            cardInsta = itemView.findViewById(R.id.id_CardView);
+            imgInsta = itemView.findViewById(R.id.imgInsta);
+            cardInsta = itemView.findViewById(R.id.cardInsta);
         }
     }
 }

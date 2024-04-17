@@ -3,10 +3,12 @@ package br.com.myskout.bottomnavigationbar;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -20,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     HomeFragment homeFragment = new HomeFragment();
     NotificationsFragment notificationsFragment = new NotificationsFragment();
     SettingsFragment settingsFragment = new SettingsFragment();
+    private View recyclerViewInsta;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
 bottomNavigationView = findViewById(R.id.bottomNavView);
 
-lstInsta = new ArrayList<>();
+        ArrayList<Object> lstInsta = new ArrayList<>();
 lstInsta.add(new Insta(R.drawable.profile));
 
 
@@ -50,14 +53,25 @@ lstInsta.add(new Insta(R.drawable.profile));
                                 beginTransaction().
                                 replace(R.id.frmContainer, homeFragment).commit();
                         RecyclerView();
-
                         return true;
+
                     case R.id.mNotifications:
                         getSupportFragmentManager().
                                 beginTransaction().
                                 replace(R.id.frmContainer, notificationsFragment).commit();
                         return true;
-                    case R.id.mSettings:
+
+                    case R.id.mProfile:
+                        getSupportFragmentManager().
+                                beginTransaction().
+                                replace(R.id.frmContainer, settingsFragment).commit();
+                        return true;
+                    case R.id.mSearch:
+                        getSupportFragmentManager().
+                                beginTransaction().
+                                replace(R.id.frmContainer, settingsFragment).commit();
+                        return true;
+                    case R.id.mCreate:
                         getSupportFragmentManager().
                                 beginTransaction().
                                 replace(R.id.frmContainer, settingsFragment).commit();
@@ -72,9 +86,19 @@ lstInsta.add(new Insta(R.drawable.profile));
 
     }
     private void RecyclerView(){
-        recyclerViewInsta = findViewById(R.id.idRecyclerInsta);
+        RecyclerView recyclerViewInsta = findViewById(R.id.idRecyclerInsta);
         recyclerViewInsta.setLayoutManager(new GridLayoutManager(getApplicationContext(), 3));
-        recyclerViewInsta
+    }
 
+    public BottomNavigationView getBottomNavigationView() {
+        return bottomNavigationView;
+    }
+
+    public void setBottomNavigationView(BottomNavigationView bottomNavigationView) {
+        this.bottomNavigationView = bottomNavigationView;
     }
 }
+
+
+
+
