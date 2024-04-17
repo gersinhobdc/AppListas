@@ -25,13 +25,6 @@
 
 
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/idRecyclerInsta"
-        android:scrollbars="vertical"
-        />
-
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profile_image"
         android:layout_width="96dp"
@@ -45,30 +38,34 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="    5\nPosts"
+        android:text="5\nPosts"
         android:textColor="@color/black"
         android:layout_marginTop="100sp"
         android:layout_marginLeft="140sp"
-        android:textSize="20sp"/>
+        android:textSize="17sp"
+        android:textAlignment="center"
+        />
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="    10M\nFollowers"
+        android:text="10M\nFollowers"
         android:textColor="@color/black"
         android:layout_marginTop="100sp"
         android:layout_marginLeft="220sp"
-        android:textSize="20sp"/>
+        android:textSize="17sp"
+        android:textAlignment="center"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="       1\nFollowing"
+        android:text="1\nFollowing"
         android:textColor="@color/black"
         android:layout_marginTop="100sp"
         android:layout_marginLeft="320sp"
-        android:textSize="20sp"/>
+        android:textSize="17sp"
+        android:textAlignment="center"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -129,5 +126,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/bottomNavView" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/idRecyclerInsta"
+        android:scrollbars="vertical"
+        android:layout_below="@+id/morePeople_button"
+        />
+
+
 
 </RelativeLayout>

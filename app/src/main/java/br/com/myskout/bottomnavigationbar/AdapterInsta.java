@@ -65,6 +65,13 @@ public class AdapterInsta extends RecyclerView.Adapter<AdapterInsta.ViewHolder> 
         CardView cardInsta;
 
 
+        public ImageView getImgInsta() {
+            return imgInsta;
+        }
+
+        public void setImgInsta(ImageView imgInsta) {
+            this.imgInsta = imgInsta;
+        }
 
         @SuppressLint("WrongViewCast")
         public ViewHolder(View itemView) {

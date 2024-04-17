@@ -24,6 +24,14 @@ public class MainActivity extends AppCompatActivity {
     SettingsFragment settingsFragment = new SettingsFragment();
     private View recyclerViewInsta;
 
+    public HomeFragment getHomeFragment() {
+        return homeFragment;
+    }
+
+    public void setHomeFragment(HomeFragment homeFragment) {
+        this.homeFragment = homeFragment;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -61,4 +61,12 @@ public class BackHome extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_back_home, container, false);
     }
+
+    public String getmParam1() {
+        return mParam1;
+    }
+
+    public void setmParam1(String mParam1) {
+        this.mParam1 = mParam1;
+    }
 }

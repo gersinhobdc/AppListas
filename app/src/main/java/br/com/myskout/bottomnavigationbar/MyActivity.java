@@ -29,4 +29,12 @@ public class MyActivity extends MainActivity {
         mAdapter = new AdapterInsta(myDataset);
         mRecyclerView.setAdapter(mAdapter);
     }
+
+    public RecyclerView getmRecyclerView() {
+        return mRecyclerView;
+    }
+
+    public void setmRecyclerView(RecyclerView mRecyclerView) {
+        this.mRecyclerView = mRecyclerView;
+    }
 }
